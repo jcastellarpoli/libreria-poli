@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="maintemplate/template :: head">
+</head>
+
+<body>
+    <header th:replace="maintemplate/template :: header">
+
+    </header>
+
+    <div class="container">
+        <h1>Prueba de listar</h1>
+
+        <p th:text="${data}"></p>
+    </div>
+    
+    <footer th:replace="maintemplate/template :: footer">
+
+    </footer>
+</body>
+
+</html>
+
