@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Libreria Poli</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head th:replace="maintemplate/template :: head">
+</head>
+
+<body>
+    <header th:replace="maintemplate/template :: header">
+
+    </header>
+
+    <div class="container">
+        <h1>Bienvenido a la libreria poli</h1>
+    </div>
+    
+    <footer th:replace="maintemplate/template :: footer">
+
+    </footer>
 </body>
+
 </html>
+
