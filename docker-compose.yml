@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+
+  mysqlserver:
+    image: mysql
+    ports: 
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=libreriapoli
+    restart: always
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 15
+
+  libreriapoli:
+    depends_on:
+      mysqlserver:
+        condition: service_healthy
+    build: .
+    ports: 
+      - "8080:8080"
+
+  phpmyadminserver:
+    image: phpmyadmin
+    ports:
+      - "9091:80"
+    environment:
+      - PMA_HOST=mysqlserver

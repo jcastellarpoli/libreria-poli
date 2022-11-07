@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.libreriapoli.libreriapoli.interfacesServicios.IModeloPruebaService;
 import com.libreriapoli.libreriapoli.modelos.ModeloPrueba;
-import com.libreriapoli.libreriapoli.servicios.ModeloPruebaService;
 
 @Controller
 @RequestMapping(path = "modelosPrueba")
