@@ -9,8 +9,41 @@
 
     </header>
 
-    <div class="container">
+    <div class="container mt-4">
         <h1>Bienvenido a la libreria poli</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>TITULO</td>
+                    <td>AUTOR</td>
+                    <td>EDITORIAL</td>
+                    <td>VOLUMEN</td>
+                    <td>CATEGORIA</td>
+                    <td>GENERO</td>
+                    <td>NUMERO DE PAGINAS</td>
+                    <td>IMAGEN</td>
+                    <td>ACCIONES</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="Libros:${libro}">
+                    <td>${Libros.id}</td>
+                    <td>${Libros.titulo}</td>
+                    <td>${Libros.autor}</td>
+                    <td>${Libros.editorial}</td>
+                    <td>${Libros.volumen}</td>
+                    <td>${Libros.categoria_id}</td>
+                    <td>${Libros.genero_id}</td>
+                    <td>${Libros.numero_paginas}</td>
+                    <td>${Libros.imagen}</td>
+                    <td>
+                        <a class="btn btn-warning" href="">Editar</a>
+                        <a href="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
     <footer th:replace="maintemplate/template :: footer">
