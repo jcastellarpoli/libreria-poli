@@ -13,6 +13,8 @@ services:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 20s
       retries: 20
+    volumes:
+      - mysql_db:/var/lib/mysql
 
   libreriapoli:
     depends_on:
@@ -28,3 +30,6 @@ services:
       - "9091:80"
     environment:
       - PMA_HOST=mysqlserver
+
+volumes:
+  mysql_db:
