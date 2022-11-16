@@ -1,4 +1,4 @@
-package com.libreriapoli.libreriapoli;
+package com.libreriapoli.libreriapoli.modelos;
 
 import javax.persistence.Table;
 import java.io.Serializable;
