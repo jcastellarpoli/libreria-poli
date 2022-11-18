@@ -18,7 +18,7 @@ public class controlador {
         @Autowired
         private ILibroService service;
 
-        @GetMapping("/listar")
+        @GetMapping("/")
         public String listar(Model model){
             List<Libros>libro=service.listar();
             model.addAttribute("libro", libro) ;

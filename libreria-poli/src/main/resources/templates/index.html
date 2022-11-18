@@ -8,15 +8,19 @@
     <header th:replace="maintemplate/template :: header">
 
     </header>
+   
 
-    <div  class="row">
-        <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
-            <div th:replace="maintemplate/template :: _card"></div>
-        </div>
- 
-    </div>  
+
+     
+
     <div class="container mt-4">
-        <h1>Bienvenido a la libreria poli</h1>
+        <div  class="row">
+            <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
+                <div th:replace="maintemplate/template :: _card"></div>
+            </div>
+        </div>
+        <br>
+        <h1 class="text-info">Bienvenido a la libreria poli</h1>
         <table class="table">
             <thead>
                 <tr>
