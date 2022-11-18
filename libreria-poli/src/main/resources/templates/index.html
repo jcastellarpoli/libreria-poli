@@ -9,6 +9,12 @@
 
     </header>
 
+    <div  class="row">
+        <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
+            <div th:replace="maintemplate/template :: _card"></div>
+        </div>
+ 
+    </div>  
     <div class="container mt-4">
         <h1>Bienvenido a la libreria poli</h1>
         <table class="table">
@@ -28,15 +34,15 @@
             </thead>
             <tbody>
                 <tr th:each="Libros:${libro}">
-                    <td>${Libros.id}</td>
-                    <td>${Libros.titulo}</td>
-                    <td>${Libros.autor}</td>
-                    <td>${Libros.editorial}</td>
-                    <td>${Libros.volumen}</td>
-                    <td>${Libros.categoria_id}</td>
-                    <td>${Libros.genero_id}</td>
-                    <td>${Libros.numero_paginas}</td>
-                    <td>${Libros.imagen}</td>
+                    <td th:text="${Libros.id}">${Libros.id}</td>
+                    <td th:text="${Libros.titulo}">${Libros.titulo}</td>
+                    <td th:text="${Libros.autor}">${Libros.autor}</td>
+                    <td th:text="${Libros.editorial}"> ${Libros.editorial}</td>
+                    <td th:text="${Libros.volumen}"> ${Libros.volumen}</td>
+                    <td th:text="${Libros.categoria_id}"> ${Libros.categoria_id}</td>
+                    <td th:text="${Libros.genero_id}">${Libros.genero_id} </td>
+                    <td th:text="${Libros.numero_paginas}">${Libros.numero_paginas}</td>
+                    <td th:text="${Libros.imagen}">${Libros.imagen}</td>
                     <td>
                         <a class="btn btn-warning" href="">Editar</a>
                         <a href="btn btn-danger">Eliminar</a>

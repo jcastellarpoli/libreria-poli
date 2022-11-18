@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.libreriapoli.libreriapoli.interfaceService.ILibroService;
 import com.libreriapoli.libreriapoli.modelo.Libros;
 
-
 @Controller
 @RequestMapping
 public class controlador {
@@ -22,7 +21,7 @@ public class controlador {
         @GetMapping("/listar")
         public String listar(Model model){
             List<Libros>libro=service.listar();
-            model.addAttribute("libro", libro);
+            model.addAttribute("libro", libro) ;
             return "index";
         }
 }
