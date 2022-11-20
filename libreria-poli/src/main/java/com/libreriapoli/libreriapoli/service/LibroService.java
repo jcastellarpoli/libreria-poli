@@ -25,14 +25,18 @@ public class LibroService implements ILibroService{
 
     @Override
     public Optional<Libros> listarId(int id) {
-        
-        return Optional.empty();
+        return data.findById(id);
+     
     }
 
     @Override
     public int save(Libros l) {
-        
-        return 0;
+        int res=0;
+        Libros  libros=data.save(l);
+        if(!libros.equals(null)) {
+            res=1;
+        }
+        return res;
     }
 
     @Override

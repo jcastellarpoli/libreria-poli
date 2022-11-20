@@ -8,19 +8,16 @@
     <header th:replace="maintemplate/template :: header">
 
     </header>
-   
-
-
-     
-
     <div class="container mt-4">
+        <h1 class="text-info">Bienvenido a la libreria poli</h1>
+        <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
         <div  class="row">
             <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
                 <div th:replace="maintemplate/template :: _card"></div>
             </div>
         </div>
         <br>
-        <h1 class="text-info">Bienvenido a la libreria poli</h1>
+        
         <table class="table">
             <thead>
                 <tr>
@@ -48,8 +45,8 @@
                     <td th:text="${Libros.numero_paginas}">${Libros.numero_paginas}</td>
                     <td th:text="${Libros.imagen}">${Libros.imagen}</td>
                     <td>
-                        <a class="btn btn-warning" href="">Editar</a>
-                        <a href="btn btn-danger">Eliminar</a>
+                        <a th:href="@{/editar/}+${Libros.id}" class="btn btn-warning" >Editar</a>
+                        <a class="btn btn-danger" >Eliminar</a>
                     </td>
                 </tr>
             </tbody>
