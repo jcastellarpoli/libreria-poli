@@ -1,4 +1,4 @@
-# libreria-poli
+# Libreria Poli
 Repositorio de la libreria poli, proyecto destinado para el estudio e implementacion de la integracion continua.
 
 <p>Herramientas utilizadas &#128296;</p>
@@ -37,5 +37,8 @@ Sistemas de gestión:
 </ul>
 
 Base de datos:
-
-<p>MySQL &nbsp;<img width="60px" src="https://user-images.githubusercontent.com/106980178/203438493-d3732da2-34cb-4b4e-afed-02be0ae1adf6.png"/></p>
+<ul>
+  <li>
+    <p>MySQL &nbsp;<img width="60px" src="https://user-images.githubusercontent.com/106980178/203438493-d3732da2-34cb-4b4e-afed-02be0ae1adf6.png"/></p>
+  </li>
+</ul>
