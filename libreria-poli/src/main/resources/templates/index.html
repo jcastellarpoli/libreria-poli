@@ -9,8 +9,12 @@
 
     </header>
     <div class="container mt-4">
-        <h1 class="text-info">Bienvenido a la libreria poli</h1>
-        <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
+        <!-- <h1 class="text-info">Bienvenido a la libreria poli</h1>
+        <a th:href="@{/new}" class="btn btn-primary  p-2 flex-shrink-1 bd-highlight">Nuevo</a> -->
+        <div class="d-flex bd-highlight">
+            <div class="fs-1 text-info p-2 w-100 bd-highlight">Bienvenido a la libreria poli</div>
+            <a th:href="@{/new}" class="btn btn-primary  p-2 flex-shrink-1 bd-highlight">Crear Nuevo Libro</a>
+          </div>
         <div  class="row">
             <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
                 <div th:replace="maintemplate/template :: _card"></div>
@@ -21,16 +25,16 @@
         <table class="table">
             <thead>
                 <tr>
-                    <td>ID</td>
-                    <td>TITULO</td>
-                    <td>AUTOR</td>
-                    <td>EDITORIAL</td>
-                    <td>VOLUMEN</td>
-                    <td>CATEGORIA</td>
-                    <td>GENERO</td>
-                    <td>NUMERO DE PAGINAS</td>
-                    <td>IMAGEN</td>
-                    <td>ACCIONES</td>
+                    <td scope="col">ID</td>
+                    <td scope="col">TITULO</td>
+                    <td scope="col">AUTOR</td>
+                    <td scope="col">EDITORIAL</td>
+                    <td scope="col">VOLUMEN</td>
+                    <td scope="col">CATEGORIA</td>
+                    <td scope="col">GENERO</td>
+                    <td scope="col">NUMERO DE PAGINAS</td>
+                    <td scope="col">IMAGEN</td>
+                    <td scope="col">ACCIONES</td>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +50,7 @@
                     <td th:text="${Libros.imagen}">${Libros.imagen}</td>
                     <td>
                         <a th:href="@{/editar/}+${Libros.id}" class="btn btn-warning" >Editar</a>
-                        <a class="btn btn-danger" >Eliminar</a>
+                        <a th:onclick="eliminar([[${Libros.id}]])" class="btn btn-danger" >Eliminar</a>
                     </td>
                 </tr>
             </tbody>

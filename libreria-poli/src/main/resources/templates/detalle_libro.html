@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="maintemplate/template :: head">
+</head>
+
+<body>
+    <header th:replace="maintemplate/template :: header">
+
+    </header>
+    <div class="container">
+        <div class="row mt-5" th:object="${libros}">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <div class="row g-3">
+                           
+                            <div class="form-group col-md-6">
+                                <label>TITULO</label>
+                                <input th:field="*{titulo}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>AUTOR</label>
+                                <input th:field="*{autor}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>EDITORIAL</label>
+                                <input th:field="*{editorial}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>VOLUMEN</label>
+                                <input th:field="*{volumen}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>CATEGORIA</label>
+                                <input th:field="*{categoria_id}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>GENERO</label>
+                                <input th:field="*{genero_id}" type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>NUMERO DE PAGINAS</label>
+                                <input th:field="*{numero_paginas}" type="text" class="form-control"/>
+                            </div>
+                           
+                        </div> 
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer th:replace="maintemplate/template :: footer">
+
+    </footer>
+</body>
+
+</html>
+

@@ -21,6 +21,7 @@ public class controlador {
 
     @Autowired
     private ILibroService service;
+    private Object svcLibros;
 
     @GetMapping("/")
     public String listar(Model model) {
@@ -47,6 +48,13 @@ public class controlador {
         model.addAttribute("libros", libros);
         return "form" ;
     }
+    @GetMapping("/detalle_libro/{id}")
+    public String detalle_libro(@PathVariable int id, Model model){
+        Optional<Libros>libros=service.listarId(id);
+        model.addAttribute("libros", libros);
+        return "detalle_libro" ;
+    }
+    
 
     @GetMapping("/eliminar/{id}")
     public String  eliminar(Model model, @PathVariable int id){

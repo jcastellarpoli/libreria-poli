@@ -41,23 +41,30 @@
             </div>
           </nav>
     </header>
-
-    <div th:fragment="_card" class="card my-2">
-      <!-- <img th:src="@{'/imagenes/'} + ${videojuego.imagen}" class="card-img-top" alt="videojuego imagen"> -->
-      <div class="card-body   text-primary mb-4" >
-          <h5 class="card-title" th:text="${Libros.titulo}">Card title</h5>
-          <p class="card-text">Autor : <span th:text="${Libros.autor}">1</span></p>
-          <!-- <a th:href="@{detalle/{id}(id=${videojuego.id})}" class="btn btn-primary btn-block">
-              ver detalle
-          </a> -->
-      </div>
-      <div class="card-footer d-flex align-items-center justify-content-between bg-primary text-secondary">
-        <p class="card-text text-white">editorial  : <span th:text="${Libros.editorial}">1</span></p>
-        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-        <a th:href="@{/editar/}+${Libros.id}"  class="btn btn-info" >Editar</a>
-        <a th:onclick="eliminar([[${Libros.id}]])" class="btn btn-danger" >Eliminar</a>
+    <div th:fragment="_card" class="card my-2" style="width: 18rem;">
+      <img th:src="${Libros.imagen}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" th:text="${Libros.titulo}">Card title</h5>
+        <p class="card-text">Autor : <span th:text="${Libros.autor}">1</span></p>
+        <a th:href="@{/detalle_libro/}+${Libros.id}"  class="btn btn-primary" >Detalle</a>
       </div>
     </div>
+    
+
+    <!-- card detalle_libro -->
+    <div th:fragment="_card_detalle" class="card my-2">
+      <div class="card" >
+        <div class="card-header ">
+            <h5 class="card-title" th:text="${Libros.titulo}">Card title</h5>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+   
     <!-- PIE DE PAGINA-->
     <footer th:fragment="footer">
         <script type="text/javascript" th:src="@{https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js}" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

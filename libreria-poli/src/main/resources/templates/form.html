@@ -4,56 +4,73 @@
 <head th:replace="maintemplate/template :: head">
 </head>
 <body>
-     <div class="container mt-4">
-            <div class="col-sm-6">
-                <form th:action="@{/save}" th:object=${libros}  method="POST">
-                    <div class="card-header">
-                        <h3>Modulo Libro</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label>ID</label>
-                            <input th:field="*{id}" type="text" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>TITULO</label>
-                            <input th:field="*{titulo}" type="text" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>AUTOR</label>
-                            <input th:field="*{autor}" type="text" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>EDITORIAL</label>
-                            <input th:field="*{editorial}" type="text" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>VOLUMEN</label>
-                            <input th:field="*{volumen}" type="text" class="form-control"/>
-                        </div>
-                        <div class="form-group">
-                            <label>CATEGORIA</label>
-                            <input th:field="*{categoria_id}" type="text" class="form-control"/>
-                        </div><div class="form-group">
-                            <label>GENERO</label>
-                            <input th:field="*{genero_id}" type="text" class="form-control"/>
-                        </div><div class="form-group">
-                            <label>NUMERO DE PAGINAS</label>
-                            <input th:field="*{numero_paginas}" type="text" class="form-control"/>
-                        </div><div class="form-group">
-                            <label>IMAGEN</label>
-                            <input th:field="*{imagen}" type="text" class="form-control"/>
-                        </div>
-                       <div class="card-footer">
-                            <input type="submit" value="Guardar" class="btn btn-success">
-                       </div>
-                    </div>
-                    <div class="card-footer">
+    <header th:replace="maintemplate/template :: header">
 
+    </header>   
+     <div class="container">
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <form th:action="@{/save}" th:object=${libros}  method="POST">
+                  <div class="row g-3">
+                    <div class="form-group col-md-6">
+                        <label>ID</label>
+                        <input th:field="*{id}" type="text" class="form-control"/>
                     </div>
+                    <div class="form-group col-md-6">
+                        <label>TITULO</label>
+                        <input th:field="*{titulo}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>AUTOR</label>
+                        <input th:field="*{autor}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>EDITORIAL</label>
+                        <input th:field="*{editorial}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>VOLUMEN</label>
+                        <input th:field="*{volumen}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>CATEGORIA</label>
+                        <input th:field="*{categoria_id}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>GENERO</label>
+                        <input th:field="*{genero_id}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>NUMERO DE PAGINAS</label>
+                        <input th:field="*{numero_paginas}" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>IMAGEN</label>
+                        <input th:field="*{imagen}" type="file" class="form-control"/>
+                    </div>
+                   <!-- <div class="card-footer">
+                        <input type="submit" value="Guardar" class="btn btn-success">
+                   </div> -->
+                  </div>
+                  <br><br>
+                  <div class="row m-3">
+                    <div class="col-md-6">
+                      <button class="btn btn-outline-secondary" type="reset" style="width:100%">Resetear
+                        Formulario
+                      </button>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" value="Guardar" class="btn btn-success" style="width:100%">
+                      <!-- <button class="btn btn-success" type="submit" style="width:100%">Guardar</button> -->
+                    </div>
+                  </div>
                 </form>
+              </div>
             </div>
-        
+          </div>
+        </div>
      </div>
      <footer th:replace="maintemplate/template :: footer">
 
