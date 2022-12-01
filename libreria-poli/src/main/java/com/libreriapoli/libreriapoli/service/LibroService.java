@@ -41,7 +41,7 @@ public class LibroService implements ILibroService{
 
     @Override
     public void delete(int id) {
-       
+       data.deleteById(id);
         
     }
     

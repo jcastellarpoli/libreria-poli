@@ -23,6 +23,14 @@ public class controlador {
     private ILibroService service;
     private Object svcLibros;
 
+    public Object getSvcLibros() {
+        return svcLibros;
+    }
+
+    public void setSvcLibros(Object svcLibros) {
+        this.svcLibros = svcLibros;
+    }
+
     @GetMapping("/")
     public String listar(Model model) {
         List<Libros> libro = service.listar();
@@ -57,7 +65,7 @@ public class controlador {
     
 
     @GetMapping("/eliminar/{id}")
-    public String  eliminar(Model model, @PathVariable int id){
+    public String  delete(Model model, @PathVariable int id){
         service.delete(id);
         return "redirect:/";
     }

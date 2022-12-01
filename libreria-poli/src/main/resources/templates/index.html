@@ -50,7 +50,7 @@
                     <td th:text="${Libros.imagen}">${Libros.imagen}</td>
                     <td>
                         <a th:href="@{/editar/}+${Libros.id}" class="btn btn-warning" >Editar</a>
-                        <a th:onclick="eliminar([[${Libros.id}]])" class="btn btn-danger" >Eliminar</a>
+                        <a  th:onclick="eliminar([[${Libros.id}]])" class="btn btn-danger" >Eliminar</a>
                     </td>
                 </tr>
             </tbody>
