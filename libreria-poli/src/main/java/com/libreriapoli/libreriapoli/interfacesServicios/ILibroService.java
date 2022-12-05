@@ -1,8 +1,9 @@
-package com.libreriapoli.libreriapoli.interfaceService;
+package com.libreriapoli.libreriapoli.interfacesServicios;
 
 import java.util.List;
 import java.util.Optional;
-import com.libreriapoli.libreriapoli.modelo.Libros;
+
+import com.libreriapoli.libreriapoli.modelos.Libros;
 
 
 public interface ILibroService {

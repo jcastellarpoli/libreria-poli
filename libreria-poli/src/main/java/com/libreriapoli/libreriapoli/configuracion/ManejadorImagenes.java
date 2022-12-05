@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.libreriapoli.libreriapoli.modelo.Libros;
+import com.libreriapoli.libreriapoli.modelos.Libros;
 
 public class ManejadorImagenes {
     

@@ -1,4 +1,4 @@
-package com.libreriapoli.libreriapoli.controler;
+package com.libreriapoli.libreriapoli.controladores;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.libreriapoli.libreriapoli.configuracion.ManejadorImagenes;
-import com.libreriapoli.libreriapoli.interfaceService.ILibroService;
-import com.libreriapoli.libreriapoli.modelo.Libros;
+import com.libreriapoli.libreriapoli.interfacesServicios.ILibroService;
+import com.libreriapoli.libreriapoli.modelos.Libros;
 
 @Controller
 @RequestMapping
