@@ -17,7 +17,7 @@
           </div>
         <div  class="row">
             <div class="col-xl-3 col-md-6" th:each="Libros:${libro}">
-                <div th:replace="maintemplate/template :: _card"></div>
+                <div th:replace="maintemplate/template :: card(id=${Libros.id}, titulo=${Libros.titulo}, autor=${Libros.autor}, imagen=${Libros.imagen})"></div>
             </div>
         </div>
         <br>
@@ -47,7 +47,7 @@
                     <td th:text="${Libros.categoria_id}"> ${Libros.categoria_id}</td>
                     <td th:text="${Libros.genero_id}">${Libros.genero_id} </td>
                     <td th:text="${Libros.numero_paginas}">${Libros.numero_paginas}</td>
-                    <td th:text="${Libros.imagen}">${Libros.imagen}</td>
+                    <td><img th:src="@{'/imagenes/' + ${Libros.imagen}}" th:alt="${Libros.imagen}" width="100px"></td>
                     <td>
                         <a th:href="@{/editar/}+${Libros.id}" class="btn btn-warning" >Editar</a>
                         <a  th:onclick="eliminar([[${Libros.id}]])" class="btn btn-danger" >Eliminar</a>

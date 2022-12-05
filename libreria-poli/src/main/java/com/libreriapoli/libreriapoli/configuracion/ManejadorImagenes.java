@@ -41,6 +41,7 @@ public class ManejadorImagenes {
             else
             {
                 rutaAbsoluta = Paths.get(RutaImagenes + "//" + rutaLibroActual);
+                nombreArchivo = rutaLibroActual;
             }
 
             if(!imagen.isEmpty())
@@ -48,7 +49,7 @@ public class ManejadorImagenes {
                 Files.write(rutaAbsoluta, imagen.getBytes());
             }
 
-            return rutaAbsoluta.toString();
+            return nombreArchivo;
         } 
         catch (Exception e) 
         {

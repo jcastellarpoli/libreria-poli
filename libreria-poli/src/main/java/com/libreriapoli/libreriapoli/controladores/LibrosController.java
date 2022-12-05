@@ -58,7 +58,7 @@ public class LibrosController {
 
     }
     @PostMapping("/save/{nuevo}")
-    public String save(@Validated  Libros l, Model model, @RequestParam("imagen") MultipartFile imagen, @PathVariable("nuevo") boolean nuevo) throws Exception 
+    public String save(@Validated  Libros l, Model model, @RequestParam("img") MultipartFile imagen, @PathVariable("nuevo") boolean nuevo) throws Exception 
     {
         String rutaImagen;
 
@@ -73,9 +73,9 @@ public class LibrosController {
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
 
-        Optional<Libros>libros=service.listarId(id);
+        Optional<Libros> libros=service.listarId(id);
 
-        model.addAttribute("libros", libros);
+        model.addAttribute("libros", libros.get());
 
         model.addAttribute("nuevo", false);
 
@@ -86,7 +86,7 @@ public class LibrosController {
 
         Optional<Libros>libros=service.listarId(id);
 
-        model.addAttribute("libros", libros);
+        model.addAttribute("libros", libros.get());
 
         return "detalle_libro" ;
     }

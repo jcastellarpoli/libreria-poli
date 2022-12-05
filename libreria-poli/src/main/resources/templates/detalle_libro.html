@@ -15,34 +15,40 @@
                     <div class="card-body">
                         
                         <div class="row g-3">
-                           
+                            <h3 class="card-title">Detalle:</h3>
+                            <div class="row">     
+                                <center>
+
+                                    <img th:src="@{'/imagenes/' + ${libros.imagen}}" class="card-img-top" th:alt="${libros.imagen}" style="width:50%;">
+                                </center>                           
+                            </div>
                             <div class="form-group col-md-6">
                                 <label>TITULO</label>
-                                <input th:field="*{titulo}" type="text" class="form-control"/>
+                                <input th:field="*{titulo}" type="text" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>AUTOR</label>
-                                <input th:field="*{autor}" type="text" class="form-control"/>
+                                <input th:field="*{autor}" type="text" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>EDITORIAL</label>
-                                <input th:field="*{editorial}" type="text" class="form-control"/>
+                                <input th:field="*{editorial}" type="text" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>VOLUMEN</label>
-                                <input th:field="*{volumen}" type="text" class="form-control"/>
+                                <input th:field="*{volumen}" type="number" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>CATEGORIA</label>
-                                <input th:field="*{categoria_id}" type="text" class="form-control"/>
+                                <input th:field="*{categoria_id}" type="number" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>GENERO</label>
-                                <input th:field="*{genero_id}" type="text" class="form-control"/>
+                                <input th:field="*{genero_id}" type="number" class="form-control" disabled/>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>NUMERO DE PAGINAS</label>
-                                <input th:field="*{numero_paginas}" type="text" class="form-control"/>
+                                <input th:field="*{numero_paginas}" type="number" class="form-control" disabled/>
                             </div>
                            
                         </div> 
