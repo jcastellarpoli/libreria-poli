@@ -26,6 +26,8 @@ services:
     build: .
     ports: 
       - "8080:8080"
+    volumes:
+      - app_image_data:/var/lib/libreria-poli/imagenes
     networks:
       - polinet
 
@@ -40,6 +42,7 @@ services:
 
 volumes:
   mysql_db:
+  app_image_data:
 
 networks:
   polinet:
