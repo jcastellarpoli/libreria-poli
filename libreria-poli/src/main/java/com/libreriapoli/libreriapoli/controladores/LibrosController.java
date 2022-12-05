@@ -20,7 +20,7 @@ import com.libreriapoli.libreriapoli.modelos.Libros;
 
 @Controller
 @RequestMapping
-public class controlador {
+public class LibrosController {
 
     @Autowired
     private ILibroService service;
