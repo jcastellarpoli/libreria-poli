@@ -27,7 +27,7 @@ services:
     ports: 
       - "8080:8080"
     volumes:
-      - "C:/libreria-poli/imagenes/:/C:/libreria-poli/imagenes/"
+      - "C:/libreria-poli/imagenes/:/C/libreria-poli/imagenes/"
     networks:
       - polinet
 

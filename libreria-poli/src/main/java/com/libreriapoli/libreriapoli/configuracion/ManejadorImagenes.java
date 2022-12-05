@@ -14,7 +14,7 @@ import com.libreriapoli.libreriapoli.modelos.Libros;
 
 public class ManejadorImagenes {
     
-    public static String RutaImagenes = "C://libreria-poli/imagenes/";
+    public static String RutaImagenes = "C//libreria-poli/imagenes/";
 
     public static String GuardarArchivoImagen(MultipartFile imagen, boolean nuevo, String rutaLibroActual) throws Exception
     {
