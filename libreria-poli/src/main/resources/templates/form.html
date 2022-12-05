@@ -12,7 +12,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <form th:action="@{/save}" th:object=${libros}  method="POST">
+                <form th:action="@{/save/{nuevo}(nuevo=${nuevo})}" th:object=${libros} method="POST">
                   <div class="row g-3">
                     <div class="form-group col-md-6">
                         <label>ID</label>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label>IMAGEN</label>
-                        <input th:field="*{imagen}" type="file" class="form-control"/>
+                        <input type="file" class="form-control" id="imagen" name="imagen" enctype="multipart/form-data"/>
                     </div>
                    <!-- <div class="card-footer">
                         <input type="submit" value="Guardar" class="btn btn-success">
