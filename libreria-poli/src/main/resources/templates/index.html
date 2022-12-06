@@ -30,8 +30,8 @@
                     <td scope="col">AUTOR</td>
                     <td scope="col">EDITORIAL</td>
                     <td scope="col">VOLUMEN</td>
-                    <td scope="col">CATEGORIA</td>
-                    <td scope="col">GENERO</td>
+                    <!-- <td scope="col">CATEGORIA</td>
+                    <td scope="col">GENERO</td> -->
                     <td scope="col">NUMERO DE PAGINAS</td>
                     <td scope="col">IMAGEN</td>
                     <td scope="col">ACCIONES</td>
@@ -44,8 +44,8 @@
                     <td th:text="${Libros.autor}">${Libros.autor}</td>
                     <td th:text="${Libros.editorial}"> ${Libros.editorial}</td>
                     <td th:text="${Libros.volumen}"> ${Libros.volumen}</td>
-                    <td th:text="${Libros.categoria_id}"> ${Libros.categoria_id}</td>
-                    <td th:text="${Libros.genero_id}">${Libros.genero_id} </td>
+                    <!-- <td th:text="${Libros.categoria_id}"> ${Libros.categoria_id}</td>
+                    <td th:text="${Libros.genero_id}">${Libros.genero_id} </td> -->
                     <td th:text="${Libros.numero_paginas}">${Libros.numero_paginas}</td>
                     <td><img th:src="@{'/imagenes/' + ${Libros.imagen}}" th:alt="${Libros.imagen}" style="width:150px;"></td>
                     <td>
