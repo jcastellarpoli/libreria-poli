@@ -24,21 +24,21 @@ public class ModeloPruebaService implements IModeloPruebaService {
     }
 
     @Override
-    public Optional<ModeloPrueba> ListarPorId(int id) {
-        // TODO Auto-generated method stub
-        return Optional.empty();
-    }
-
-    @Override
     public int Save(ModeloPrueba modelo) {
-        // TODO Auto-generated method stub
+       
         return 0;
     }
 
     @Override
     public void Delete(int id) {
-        // TODO Auto-generated method stub
         
+        
+    }
+
+    @Override
+    public Optional<ModeloPrueba> ListarPorId(int id) {
+        // TODO Auto-generated method stub
+        return Optional.empty();
     }
     
 }
