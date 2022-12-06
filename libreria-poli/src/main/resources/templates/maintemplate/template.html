@@ -42,7 +42,9 @@
           </nav>
     </header>
     <div th:fragment="card(id, titulo, autor, imagen)" class="card my-2" style="width: 18rem;">
-      <img th:src="@{'/imagenes/' + ${imagen}}" class="card-img-top" th:alt="${imagen}" style="width:150px;">
+      <center>
+        <img th:src="@{'/imagenes/' + ${imagen}}" class="card-img-top" th:alt="${imagen}" style="width:150px;">
+      </center>
       <div class="card-body">
         <h5 class="card-title" th:text="${titulo}">Card title</h5>
         <p class="card-text">Autor : <span th:text="${autor}">${autor}</span></p>
