@@ -38,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="Libros:${libro}">
+                <tr th:each="Libros:${libro}" th:classappend="${Libros.activo} ? table-success : table-danger">
                     <td th:text="${Libros.id}">${Libros.id}</td>
                     <td th:text="${Libros.titulo}">${Libros.titulo}</td>
                     <td th:text="${Libros.autor}">${Libros.autor}</td>
