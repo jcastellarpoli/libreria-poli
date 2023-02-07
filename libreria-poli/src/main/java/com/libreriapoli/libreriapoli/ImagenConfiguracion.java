@@ -14,4 +14,7 @@ public class ImagenConfiguracion implements WebMvcConfigurer {
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c29e00ddd68ba8811b70f9a174e9e571b16be6e8
