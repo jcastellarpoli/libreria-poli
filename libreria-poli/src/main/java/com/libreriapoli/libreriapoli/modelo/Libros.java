@@ -22,6 +22,14 @@ public class Libros {
     private int genero_id;
     private int numero_paginas;
     private String imagen;
+    private boolean activo= true;
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
 
     public Libros() {
 
