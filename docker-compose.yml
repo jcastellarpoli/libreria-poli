@@ -1,4 +1,5 @@
 version: "3.9"
+name: libreriapoliproject
 services:
 
   mysqlserver:
@@ -25,6 +26,8 @@ services:
     build: .
     ports: 
       - "8080:8080"
+    volumes:
+      - "C:/libreria-poli/imagenes/:/C/libreria-poli/imagenes/"
     networks:
       - polinet
 

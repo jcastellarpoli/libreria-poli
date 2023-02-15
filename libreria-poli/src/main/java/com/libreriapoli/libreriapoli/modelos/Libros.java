@@ -1,4 +1,4 @@
-package com.libreriapoli.libreriapoli.modelo;
+package com.libreriapoli.libreriapoli.modelos;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

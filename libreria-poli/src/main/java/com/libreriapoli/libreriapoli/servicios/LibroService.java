@@ -1,4 +1,4 @@
-package com.libreriapoli.libreriapoli.service;
+package com.libreriapoli.libreriapoli.servicios;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.libreriapoli.libreriapoli.interfaceService.ILibroService;
 import com.libreriapoli.libreriapoli.interfaces.ILibros;
-import com.libreriapoli.libreriapoli.modelo.Libros;
+import com.libreriapoli.libreriapoli.interfacesServicios.ILibroService;
+import com.libreriapoli.libreriapoli.modelos.Libros;
 
 
 @Service

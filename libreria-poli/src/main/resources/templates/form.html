@@ -12,11 +12,11 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <form th:action="@{/save}" th:object=${libros}  method="POST">
+                <form th:action="@{/save/{nuevo}(nuevo=${nuevo})}" th:object=${libros} method="POST" enctype="multipart/form-data">
                   <div class="row g-3">
                     <div class="form-group col-md-6">
                         <label>ID</label>
-                        <input th:field="*{id}" type="text" class="form-control"/>
+                        <input th:field="*{id}" type="text" class="form-control" readonly/>
                     </div>
                     <div class="form-group col-md-6">
                         <label>TITULO</label>
@@ -32,27 +32,27 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label>VOLUMEN</label>
-                        <input th:field="*{volumen}" type="text" class="form-control"/>
+                        <input th:field="*{volumen}" type="number" class="form-control"/>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label>CATEGORIA</label>
-                        <input th:field="*{categoria_id}" type="text" class="form-control"/>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>GENERO</label>
-                        <input th:field="*{genero_id}" type="text" class="form-control"/>
-                    </div>
+                    <!-- <div class="form-group col-md-4"> -->
+                        <!-- <label>CATEGORIA</label> -->
+                        <input th:field="*{categoria_id}" type="hidden" class="form-control"/>
+                    <!-- </div> -->
+                    <!-- <div class="form-group col-md-4"> -->
+                        <!-- <label>GENERO</label> -->
+                        <input th:field="*{genero_id}" type="hidden" class="form-control"/>
+                    <!-- </div> -->
                     <div class="form-group col-md-4">
                         <label>NUMERO DE PAGINAS</label>
-                        <input th:field="*{numero_paginas}" type="text" class="form-control"/>
+                        <input th:field="*{numero_paginas}" type="number" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <img th:src="@{'/imagenes/' + *{imagen}}" width="100px">
                     </div>
                     <div class="form-group col-md-12">
                         <label>IMAGEN</label>
-                        <input type="file" class="form-control" id="archivo" name="archivo"/>
+                        <input th:field="*{imagen}" type="file" class="form-control"/>
                     </div>
-                    <div class="form-group col-md-12">
-                      <input th:field="*{imagen}" type="hidden" class="form-control" id="imagen" name="imagen"/>
-                  </div>
                    <!-- <div class="card-footer">
                         <input type="submit" value="Guardar" class="btn btn-success">
                    </div> -->

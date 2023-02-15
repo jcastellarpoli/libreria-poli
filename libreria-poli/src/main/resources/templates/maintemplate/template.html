@@ -21,17 +21,17 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Catalogo</a>
+                    <a class="nav-link" href="/">Catalogo</a>
                   </li>   
                   <li class="nav-item">
                     <a class="nav-link" href="#">Libros</a>
                   </li>    
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Categorias</a>
                   </li>    
                   <li class="nav-item">
                     <a class="nav-link" href="#">Generos</a>
-                  </li>                    
+                  </li>                     -->
                 </ul>
                 <!-- <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,12 +41,14 @@
             </div>
           </nav>
     </header>
-    <div th:fragment="_card" class="card my-2" style="width: 18rem;">
-      <img th:src="${Libros.imagen}" class="card-img-top" alt="...">
+    <div th:fragment="card(id, titulo, autor, imagen)" class="card my-2" style="width: 18rem;">
+      <center>
+        <img th:src="@{'/imagenes/' + ${imagen}}" class="card-img-top" th:alt="${imagen}" style="width:150px;">
+      </center>
       <div class="card-body">
-        <h5 class="card-title" th:text="${Libros.titulo}">Card title</h5>
-        <p class="card-text">Autor : <span th:text="${Libros.autor}">1</span></p>
-        <a th:href="@{/detalle_libro/}+${Libros.id}"  class="btn btn-primary" >Detalle</a>
+        <h5 class="card-title" th:text="${titulo}">Card title</h5>
+        <p class="card-text">Autor : <span th:text="${autor}">${autor}</span></p>
+        <a th:href="@{/detalle_libro/}+${id}"  class="btn btn-primary" >Detalle</a>
       </div>
     </div>
     
