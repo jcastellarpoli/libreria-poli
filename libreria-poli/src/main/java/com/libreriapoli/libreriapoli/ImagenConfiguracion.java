@@ -10,11 +10,7 @@ public class ImagenConfiguracion implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
         WebMvcConfigurer.super.addResourceHandlers(registry);
-        registry.addResourceHandler("/imagenes/**").addResourceLocations("file:/C:/Users/User/java/libreria-poli/libreria-poli/imagenes/");
+        registry.addResourceHandler("/imagenes/**").addResourceLocations("file:/C/Users/User/java/libreria-poli/libreria-poli/imagenes/");
     }
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> c29e00ddd68ba8811b70f9a174e9e571b16be6e8
